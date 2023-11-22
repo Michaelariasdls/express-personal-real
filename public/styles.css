@@ -1,0 +1,42 @@
+body{
+  background: rgb(95, 91, 91);
+}
+h3{
+  margin-top: 40px;
+}
+i{
+color: black;
+border: 1px solid black;
+padding: 10px 10px;
+}
+
+
+.green-background {
+  background-color: #00ff00; /* or any shade of green you prefer */
+}
+
+.yellow-background {
+  background-color: #e5ff00; /* or any shade of green you prefer */
+}
+
+.message{
+  border: 1px solid black;
+}
+
+/* .paused{
+color:yellow;
+}  */
+
+
+
+.fa-check{
+  background-color: green;
+}
+
+.fa-pause{
+  background-color: yellow;
+}
+
+.fa-trash{
+  background-color: red;
+}

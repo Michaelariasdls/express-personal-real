@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Event Planner</h1>
+  <h2>Event's listed</h2>
+
+
+
+  <h3></h3>
+  <ul class="event">
+    <% for (let i = 0; i < events.length; i++) { %>
+      <li class="<% if (events[i].willAttend === 'yes') { %>green-background<% } else { %><% if (events[i].willAttend === 'maybe') { %>yellow-background<% } %> <% } %>">
+          <span class="name"><%= events[i].name %></span>
+          <span class="date"><%= events[i].date %></span>
+          <span><i class="fa fa-check" aria-hidden="true"></i></span>
+          <span><i class="fa fa-pause" aria-hidden="true"></i></span>
+          <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+      </li>
+  <% } %>
+  </ul>
+
+  <h2>Add a event below</h2>
+
+  <form action="/events" method="POST">
+    <input type="text" placeholder="Name" name="name" required>
+    <input id="datePicker" type="date" placeholder="Date" name="date" required >
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
